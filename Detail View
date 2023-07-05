@@ -1,0 +1,27 @@
+import SwiftUI
+import Meal
+
+struct DetailView: View {
+    let meal: Meal
+    
+    var body: some View {
+        VStack {
+            Text(meal.name)
+                .font(.title)
+            
+            Text("Instructions: \(meal.instructions)")
+                .padding()
+            
+            Text("Ingredients:")
+                .font(.headline)
+            
+            ForEach(meal.ingredients, id: \.self) { ingredient in
+                Text(ingredient)
+                    .padding(.leading)
+            }
+            
+            Spacer()
+        }
+        .navigationTitle(meal.name)
+    }
+}

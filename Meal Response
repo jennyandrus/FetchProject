@@ -1,0 +1,10 @@
+struct MealResponse: Decodable {
+    let meals: [Meal]
+}
+
+struct Meal: Decodable {
+    let id: String
+    let name: String
+    let instructions: String
+    let ingredients: [String]
+}

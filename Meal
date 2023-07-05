@@ -1,0 +1,10 @@
+import Foundation
+import DetailView
+
+let meal = Meal(
+    id: "1",
+    name: "Spaghetti",
+    instructions: "Cook pasta and sauce according to package instructions. Mix together and serve.",
+    ingredients: ["pasta", "sauce", "parmesan cheese"]
+)
+
